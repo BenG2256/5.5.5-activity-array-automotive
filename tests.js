@@ -1,3 +1,6 @@
+import Vehicle from './vehicle.js';
+import Factory from './factory.js';
+
 let vehicleClassTestElement = document.querySelector("#vehicle-class-test")
 let factoryClassTestElement = document.querySelector("#factory-class-test")
 
@@ -25,7 +28,7 @@ try {
         v.year === 2015 &&
         v.price === 50000 &&
         v.vin === "12312" &&
-        v.color === "blue" &&
+        v.paintColor=== "blue" &&
         v.drive() === "2015 Jord J-051 drives"
     ){
         vehicleClassTestElement.textContent = "Passed"
@@ -56,8 +59,8 @@ try {
         f.location === "Germany" &&
         f.owner === "Elon Tusk"&&
         f.vehicles.length === 2 &&
-        f.vehicles.find(v => v.vin === "123123").color === 'green'&&
-        f.vehicles.find(v => v.vin === "98081").color === 'red' &&
+        f.vehicles.find(v => v.vin === "123123").paintColor === 'green'&&
+        f.vehicles.find(v => v.vin === "98081").paintColor === 'red' &&
         f.listVehicles() === f.vehicles
     ){
         factoryClassTestElement.textContent = "Passed"
